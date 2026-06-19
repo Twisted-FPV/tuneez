@@ -1,0 +1,29 @@
+<!doctype html><html><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>TuneEZ</title><link rel="stylesheet" href="/static/style.css"/>
+</head><body>
+<main class="shell">
+<section class="hero"><div><p class="eyebrow">Free Open FPV Tuning</p><h1>TuneEZ</h1>
+<p>Upload Blackbox logs and CLI dumps. Get explainable PID/filter recommendations and copy-paste CLI.</p></div>
+<div class="score-card"><span>Workflow</span><strong>Upload → Analyze → Apply → Re-log</strong></div></section>
+<section class="grid">
+<form id="form" class="panel"><h2>New tune session</h2>
+<label>Blackbox log<input name="blackbox" type="file" required></label>
+<label>CLI dump / diff all<input name="cli_dump" type="file" required></label>
+<div class="two">
+<label>Craft type<input id="craft_type" value="freestyle"></label>
+<label>Flight style<input id="flight_style" value="freestyle"></label>
+<label>Frame size<input id="frame_size" placeholder="5 inch"></label>
+<label>Gyro<input id="gyro" placeholder="MPU6000 / BMI270"></label>
+<label>Motor KV<input id="motor_kv" type="number" placeholder="1960"></label>
+<label>Battery cells<input id="battery_cells" type="number" placeholder="6"></label>
+</div>
+<label>Symptoms<input id="symptoms" placeholder="propwash, hot motors, bounceback"></label>
+<button type="submit">Analyze tune</button></form>
+<section class="panel"><h2>Flight controller options</h2>
+<p>Upload files now. Desktop Web Serial and Android native USB serial are the direct-FC paths.</p>
+<button id="serial">Check FC mode</button><pre id="serialOut"></pre></section>
+</section>
+<section class="panel report"><h2>Report</h2><div id="summary">No report yet.</div><div id="scores"></div>
+<h3>Findings</h3><div id="findings"></div><h3>Copy-paste CLI</h3><pre id="cli"></pre></section>
+</main><script src="/static/app.js"></script></body></html>

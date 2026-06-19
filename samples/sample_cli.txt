@@ -1,0 +1,9 @@
+# Betaflight / STM32F7X2 4.5.0
+set p_roll = 58
+set i_roll = 95
+set d_roll = 42
+set p_pitch = 62
+set i_pitch = 100
+set d_pitch = 46
+set dshot_bidir = ON
+set dyn_notch_count = 1
